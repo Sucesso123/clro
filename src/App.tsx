@@ -1,7 +1,7 @@
 import { FileText, HandshakeIcon, MessageCircle } from 'lucide-react';
 
 function App() {
-  const whatsappNumber = '5511961092812';
+  const whatsappNumber = '5581986033937';
 
   const handleWhatsAppClick = (message: string) => {
     const encodedMessage = encodeURIComponent(message);
@@ -44,10 +44,10 @@ function App() {
             </div>
           </div>
           <h1 className="text-5xl font-bold text-slate-800 mb-3">
-            Gestão de Energia
+            Gestão da Claro
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Soluções rápidas e eficientes para seus serviços de energia
+            Soluções rápidas e eficientes para seus serviços
           </p>
         </header>
 
@@ -86,7 +86,7 @@ function App() {
               Atendimento disponível de segunda a sexta, das 8h às 18h
             </p>
             <p className="text-sm text-slate-500">
-              WhatsApp: (11) 96109-2812
+              WhatsApp
             </p>
           </div>
         </footer>
