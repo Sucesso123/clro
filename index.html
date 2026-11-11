@@ -1,458 +1,238 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carlos Eduardo Gomes Carbobiak — Consultoria Estratégica</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
-            },
-          },
-        },
-      };
-    </script>
-    <meta property="og:image" content="https://bolt.new/static/og_default.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123b78">
+  <meta name="description" content="Monteiro Rinco Assessoria e Consultoria Ltda. Consultoria estratégica empresarial.">
+  <title>MONTEIRO RINCO ASSESSORIA E CONSULTORIA LTDA — Consultoria Estratégica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','Arial','sans-serif'] } } } };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+    body { font-family: Inter, system-ui, sans-serif; }
+  </style>
 </head>
-  <body class="font-sans text-gray-800 bg-gray-50 m-0">
+<body class="font-sans text-gray-800 bg-gray-50 m-0">
+  <!-- Configure os contatos nos campos indicados antes de publicar. -->
+  <header id="header" class="fixed top-0 inset-x-0 z-50 bg-white/95 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between gap-4">
+      <a href="#inicio" class="text-blue-900 font-extrabold text-sm md:text-base leading-tight tracking-tight max-w-[230px]">
+        MONTEIRO RINCO <span class="block text-xs font-semibold text-gray-500">ASSESSORIA E CONSULTORIA LTDA</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-1">
+        <a href="#quem-somos" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-700 hover:bg-gray-100">Quem Somos</a>
+        <a href="#servicos" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-700 hover:bg-gray-100">Serviços</a>
+        <a href="#contato" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-700 hover:bg-gray-100">Contato</a>
+        <a href="#privacidade" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-700 hover:bg-gray-100">Privacidade</a>
+        <a href="#contato" class="ml-2 px-5 py-2 bg-blue-700 text-white rounded-md text-sm font-semibold hover:bg-blue-800">Falar Agora</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100" aria-label="Abrir menu" aria-expanded="false">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 shadow-lg hidden">
+      <nav class="px-4 py-3 flex flex-col gap-1">
+        <a href="#quem-somos" class="px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 rounded-md">Quem Somos</a>
+        <a href="#servicos" class="px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 rounded-md">Serviços</a>
+        <a href="#contato" class="px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 rounded-md">Contato</a>
+        <a href="#privacidade" class="px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 rounded-md">Privacidade</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- HEADER -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 shadow-sm">
-      <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <button onclick="scrollToSection('inicio')" class="text-blue-800 font-bold text-base md:text-lg leading-tight tracking-tight hover:text-blue-700 transition-colors">
-          Carlos Eduardo Gomes Carbobiak
-        </button>
-
-        <nav class="hidden md:flex items-center gap-1">
-          <button onclick="scrollToSection('quem-somos')" data-nav="quem-somos" class="nav-link px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 text-gray-600 hover:text-blue-700 hover:bg-gray-100">
-            Quem Somos
-          </button>
-          <button onclick="scrollToSection('servicos')" data-nav="servicos" class="nav-link px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 text-gray-600 hover:text-blue-700 hover:bg-gray-100">
-            Serviços
-          </button>
-          <button onclick="scrollToSection('contato')" data-nav="contato" class="nav-link px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 text-gray-600 hover:text-blue-700 hover:bg-gray-100">
-            Contato
-          </button>
-          <button onclick="scrollToSection('privacidade')" data-nav="privacidade" class="nav-link px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 text-gray-600 hover:text-blue-700 hover:bg-gray-100">
-            Privacidade
-          </button>
-          <a href="https://wa.me/554196604511" target="_blank" rel="noopener noreferrer" class="ml-3 px-5 py-2 bg-blue-700 text-white rounded-md text-sm font-semibold hover:bg-blue-800 transition-colors duration-200">
-            Falar Agora
-          </a>
-        </nav>
-
-        <button id="menu-toggle" class="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100 transition-colors" aria-label="Menu">
-          <i data-lucide="menu" class="w-[22px] h-[22px]"></i>
-        </button>
-      </div>
-
-      <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 shadow-lg hidden">
-        <div class="px-4 py-3 flex flex-col gap-1">
-          <button onclick="scrollToSection('quem-somos')" class="px-4 py-3 text-sm font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors text-left">
-            Quem Somos
-          </button>
-          <button onclick="scrollToSection('servicos')" class="px-4 py-3 text-sm font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors text-left">
-            Serviços
-          </button>
-          <button onclick="scrollToSection('contato')" class="px-4 py-3 text-sm font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors text-left">
-            Contato
-          </button>
-          <button onclick="scrollToSection('privacidade')" class="px-4 py-3 text-sm font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors text-left">
-            Privacidade
-          </button>
-          <a href="https://wa.me/554196604511" target="_blank" rel="noopener noreferrer" class="mt-2 px-4 py-3 bg-blue-700 text-white rounded-md text-sm font-semibold text-center hover:bg-blue-800 transition-colors">
-            Falar pelo WhatsApp
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <!-- HERO -->
-    <section id="inicio" class="pt-16">
-      <div class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
+  <main>
+    <section id="inicio" class="pt-20">
+      <div class="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-700 text-white">
         <div class="max-w-6xl mx-auto px-6 py-24 md:py-36 text-center">
-          <div class="inline-flex items-center gap-2 bg-blue-700/40 border border-blue-500/40 rounded-full px-4 py-1.5 text-sm font-medium text-blue-100 mb-6">
-            <i data-lucide="award" class="w-3.5 h-3.5"></i>
-            Consultoria Estratégica Empresarial
+          <div class="inline-flex items-center gap-2 bg-blue-700/40 border border-blue-400/40 rounded-full px-4 py-2 text-sm font-medium text-blue-100 mb-6">
+            <i data-lucide="award" class="w-4 h-4"></i> Consultoria Estratégica Empresarial
           </div>
-          <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-5 text-white">
-            Fazemos sua empresa crescer
-            <br class="hidden md:block" />
-            <span class="text-blue-300"> por conta própria.</span>
+          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-5">
+            Estratégia e conhecimento para <span class="text-blue-300">fortalecer sua empresa.</span>
           </h1>
           <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed mb-10">
-            Consultoria estratégica que capacita sua equipe e processos internos para resultados
-            sustentáveis e duradouros — sem dependência externa.
+            Consultoria estratégica para aprimorar processos, desenvolver equipes e apoiar decisões empresariais com clareza e planejamento.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/554196604511" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-blue-800 rounded-lg font-semibold text-base hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-              <i data-lucide="message-circle" class="w-[18px] h-[18px]"></i>
-              Conversar no WhatsApp
+            <a href="#contato" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-50 shadow-lg">
+              <i data-lucide="message-circle" class="w-5 h-5"></i> Entre em contato
             </a>
-            <button onclick="scrollToSection('servicos')" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/40 text-white rounded-lg font-semibold text-base hover:bg-white/10 transition-all duration-200">
-              Ver Serviços
-              <i data-lucide="chevron-down" class="w-[18px] h-[18px]"></i>
-            </button>
+            <a href="#servicos" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/40 text-white rounded-lg font-semibold hover:bg-white/10">
+              Conheça os serviços <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </a>
           </div>
         </div>
       </div>
-
       <div class="bg-white border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div class="flex flex-col items-center gap-1">
-            <span class="text-2xl font-bold text-blue-700">100%</span>
-            <span class="text-xs text-gray-500 font-medium">Transparência nas Operações</span>
-          </div>
-          <div class="flex flex-col items-center gap-1">
-            <span class="text-2xl font-bold text-blue-700">LGPD</span>
-            <span class="text-xs text-gray-500 font-medium">Conformidade de Dados</span>
-          </div>
-          <div class="flex flex-col items-center gap-1">
-            <span class="text-2xl font-bold text-blue-700">CNPJ</span>
-            <span class="text-xs text-gray-500 font-medium">Empresa Registrada</span>
-          </div>
-          <div class="flex flex-col items-center gap-1">
-            <span class="text-2xl font-bold text-blue-700">24h</span>
-            <span class="text-xs text-gray-500 font-medium">Suporte e Atendimento</span>
-          </div>
+        <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
+          <div><div class="text-2xl font-bold text-blue-700">Estratégia</div><div class="text-xs text-gray-500 font-medium">Planejamento empresarial</div></div>
+          <div><div class="text-2xl font-bold text-blue-700">Processos</div><div class="text-xs text-gray-500 font-medium">Organização e eficiência</div></div>
+          <div class="col-span-2 md:col-span-1"><div class="text-2xl font-bold text-blue-700">Pessoas</div><div class="text-xs text-gray-500 font-medium">Desenvolvimento de equipes</div></div>
         </div>
       </div>
     </section>
 
-    <!-- QUEM SOMOS -->
     <section id="quem-somos" class="py-20 bg-gray-50">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-12">
-          <span class="text-sm font-semibold text-blue-600 uppercase tracking-widest">Identidade e Transparência</span>
+          <span class="text-sm font-semibold text-blue-600 uppercase tracking-widest">Identidade e transparência</span>
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Quem Somos</h2>
-          <p class="text-gray-500 max-w-xl mx-auto">
-            Prezamos pela clareza total sobre quem opera este serviço e como atuamos.
-          </p>
+          <p class="text-gray-500 max-w-2xl mx-auto">Conheça a organização e as informações institucionais da empresa.</p>
         </div>
-
         <div class="grid md:grid-cols-2 gap-8">
           <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-            <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
-              <i data-lucide="users" class="w-5 h-5 text-blue-700"></i>
-            </div>
+            <div class="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center mb-5"><i data-lucide="users" class="w-5 h-5 text-blue-700"></i></div>
             <h3 class="text-xl font-bold text-gray-900 mb-4">Nossa Atuação</h3>
             <p class="text-gray-600 leading-relaxed mb-4">
-              Somos uma consultoria estratégica com foco em capacitar empresas a crescerem por meio de
-              seus próprios processos e equipes internas. Não terceirizamos resultados — ensinamos,
-              estruturamos e acompanhamos cada etapa do desenvolvimento do seu negócio.
+              A MONTEIRO RINCO ASSESSORIA E CONSULTORIA LTDA atua com foco em assessoria e consultoria empresarial, apoiando organizações na análise de seus desafios, no planejamento de ações e no aprimoramento de processos.
             </p>
             <p class="text-gray-600 leading-relaxed">
-              Nosso diferencial está no comprometimento com práticas éticas, transparência total nas
-              operações e no desenvolvimento de competências que permanecem com a sua empresa.
+              Nosso compromisso é oferecer atendimento claro, responsável e orientado às necessidades de cada negócio. As atividades e entregas são definidas conforme o escopo efetivamente contratado.
             </p>
           </div>
-
           <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-            <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
-              <i data-lucide="building-2" class="w-5 h-5 text-blue-700"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-5">Dados Oficiais</h3>
+            <div class="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center mb-5"><i data-lucide="building-2" class="w-5 h-5 text-blue-700"></i></div>
+            <h3 class="text-xl font-bold text-gray-900 mb-5">Dados da Organização</h3>
             <ul class="space-y-4">
-              <li class="flex flex-col gap-0.5">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Responsável</span>
-                <span class="text-gray-800 text-sm font-medium">Carlos Eduardo Gomes Carbobiak</span>
-              </li>
-              <li class="flex flex-col gap-0.5">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">CNPJ</span>
-                <span class="text-gray-800 text-sm font-medium">65.543.950/0001-08</span>
-              </li>
-              <li class="flex flex-col gap-0.5">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Endereço</span>
-                <span class="text-gray-800 text-sm font-medium">Rua Francisco de Almeida Filho, 59 — Cidade Industrial, Curitiba/PR — CEP 81279-215</span>
-              </li>
-              <li class="flex flex-col gap-0.5">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">E-mail</span>
-                <span class="text-gray-800 text-sm font-medium">caducarbobiak@gmail.com</span>
-              </li>
-              <li class="flex flex-col gap-0.5">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Telefone / WhatsApp</span>
-                <span class="text-gray-800 text-sm font-medium">(41) 9660-4511</span>
-              </li>
+              <li><span class="block text-xs font-semibold text-blue-600 uppercase tracking-wider">Razão social</span><span class="text-gray-800 text-sm font-medium">MONTEIRO RINCO ASSESSORIA E CONSULTORIA LTDA</span></li>
+              <li><span class="block text-xs font-semibold text-blue-600 uppercase tracking-wider">CNPJ</span><span class="text-gray-800 text-sm font-medium">61.754.608/0001-04</span></li>
+              <li><span class="block text-xs font-semibold text-blue-600 uppercase tracking-wider">Responsável / Proprietária informada</span><span class="text-gray-800 text-sm font-medium">Ana Carolina Ferreira da Silva</span></li>
+              <li><span class="block text-xs font-semibold text-blue-600 uppercase tracking-wider">Endereço informado</span><span class="text-gray-800 text-sm font-medium">Rua 8, nº 8, LT 1 QO, Centro, Itapetininga/SP — CEP 18200-999</span></li>
             </ul>
+            <p class="text-xs text-gray-400 mt-5">Confira os dados cadastrais e a grafia oficial do endereço antes da publicação.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVIÇOS -->
     <section id="servicos" class="py-20 bg-white">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-12">
           <span class="text-sm font-semibold text-blue-600 uppercase tracking-widest">O que oferecemos</span>
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Nossos Serviços</h2>
-          <p class="text-gray-500 max-w-xl mx-auto">
-            Cada serviço é desenhado para fortalecer as capacidades internas da sua empresa.
-          </p>
+          <p class="text-gray-500 max-w-xl mx-auto">Soluções de assessoria e consultoria voltadas à organização e ao desenvolvimento empresarial.</p>
         </div>
-
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="group bg-gray-50 rounded-2xl p-7 border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all duration-300 cursor-default">
-            <div class="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-700 transition-colors duration-300">
-              <i data-lucide="trending-up" class="w-5 h-5 text-blue-700 group-hover:text-white transition-colors duration-300"></i>
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-3">Consultoria de Crescimento Estratégico</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-5">
-              Análise completa do seu negócio, identificação de gargalos e desenvolvimento de um plano de crescimento personalizado com metas claras e mensuráveis.
-            </p>
-            <ul class="space-y-2">
-              <li class="flex items-center gap-2 text-sm text-gray-700">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0"></i>
-                Diagnóstico empresarial
-              </li>
-              <li class="flex items-center gap-2 text-sm text-gray-700">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0"></i>
-                Planejamento estratégico
-              </li>
-              <li class="flex items-center gap-2 text-sm text-gray-700">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0"></i>
-                Definição de KPIs
-              </li>
-            </ul>
-          </div>
-
-          <div class="group bg-gray-50 rounded-2xl p-7 border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all duration-300 cursor-default">
-            <div class="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-700 transition-colors duration-300">
-              <i data-lucide="users" class="w-5 h-5 text-blue-700 group-hover:text-white transition-colors duration-300"></i>
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-3">Capacitação de Equipes Internas</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-5">
-              Treinamentos práticos e acompanhamento contínuo para desenvolver as habilidades da sua equipe, garantindo que o conhecimento fique dentro da empresa.
-            </p>
-            <ul class="space-y-2">
-              <li class="flex items-center gap-2 text-sm text-gray-700">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0"></i>
-                Treinamentos customizados
-              </li>
-              <li class="flex items-center gap-2 text-sm text-gray-700">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0"></i>
-                Gestão e liderança
-              </li>
-              <li class="flex items-center gap-2 text-sm text-gray-700">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0"></i>
-                Processos e metodologias
-              </li>
-            </ul>
-          </div>
-
-          <div class="group bg-gray-50 rounded-2xl p-7 border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all duration-300 cursor-default">
-            <div class="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-700 transition-colors duration-300">
-              <i data-lucide="bar-chart-2" class="w-5 h-5 text-blue-700 group-hover:text-white transition-colors duration-300"></i>
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-3">Estruturação de Processos e Dados</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-5">
-              Organização e otimização dos processos operacionais e criação de uma cultura baseada em dados para decisões mais assertivas e rentáveis.
-            </p>
-            <ul class="space-y-2">
-              <li class="flex items-center gap-2 text-sm text-gray-700">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0"></i>
-                Mapeamento de processos
-              </li>
-              <li class="flex items-center gap-2 text-sm text-gray-700">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0"></i>
-                Dashboards e relatórios
-              </li>
-              <li class="flex items-center gap-2 text-sm text-gray-700">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0"></i>
-                Cultura data-driven
-              </li>
-            </ul>
-          </div>
+          <article class="bg-gray-50 rounded-2xl p-7 border border-gray-100 hover:border-blue-200 hover:shadow-md transition">
+            <div class="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><i data-lucide="trending-up" class="w-5 h-5 text-blue-700"></i></div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Consultoria Estratégica</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Análise de objetivos, identificação de oportunidades e apoio na elaboração de planos de ação.</p>
+          </article>
+          <article class="bg-gray-50 rounded-2xl p-7 border border-gray-100 hover:border-blue-200 hover:shadow-md transition">
+            <div class="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><i data-lucide="users" class="w-5 h-5 text-blue-700"></i></div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Assessoria e Desenvolvimento</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Apoio à gestão, orientação de equipes e aprimoramento das rotinas de trabalho.</p>
+          </article>
+          <article class="bg-gray-50 rounded-2xl p-7 border border-gray-100 hover:border-blue-200 hover:shadow-md transition">
+            <div class="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><i data-lucide="bar-chart-3" class="w-5 h-5 text-blue-700"></i></div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Processos e Gestão</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Mapeamento de processos, organização de informações e apoio à tomada de decisões.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato" class="py-20 bg-blue-800 text-white">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-12">
-          <span class="text-sm font-semibold text-blue-300 uppercase tracking-widest">Entre em contato</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">Fale com a Consultoria</h2>
-          <p class="text-blue-200 max-w-xl mx-auto">
-            Disponíveis para tirar dúvidas, apresentar nossa metodologia e iniciar um diagnóstico gratuito do seu negócio.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-5 mb-8">
-          <a href="https://wa.me/554196604511" target="_blank" rel="noopener noreferrer" class="group bg-blue-700/50 border border-blue-600/40 rounded-2xl p-6 flex flex-col items-center text-center gap-3 hover:bg-white hover:border-white transition-all duration-300 cursor-pointer">
-            <div class="w-12 h-12 bg-white/10 group-hover:bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300">
-              <i data-lucide="message-circle" class="w-[22px] h-[22px] text-white group-hover:text-blue-700 transition-colors duration-300"></i>
-            </div>
-            <div>
-              <p class="font-semibold text-white group-hover:text-blue-900 transition-colors text-sm">WhatsApp</p>
-              <p class="text-blue-200 group-hover:text-blue-600 text-sm transition-colors">(41) 9660-4511</p>
-            </div>
-            <span class="text-xs font-semibold text-blue-300 group-hover:text-blue-600 transition-colors">Enviar mensagem →</span>
+    <section id="contato" class="py-20 bg-blue-900 text-white">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <span class="text-sm font-semibold text-blue-300 uppercase tracking-widest">Entre em contato</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Fale com a nossa equipe</h2>
+        <p class="text-blue-200 max-w-xl mx-auto mb-10">Entre em contato para obter informações sobre a empresa e seus serviços.</p>
+        <div class="max-w-4xl mx-auto grid sm:grid-cols-3 gap-5">
+          <a href="https://wa.me/554196604511" target="_blank" rel="noopener noreferrer" class="bg-blue-800/60 border border-blue-700 rounded-2xl p-6 hover:bg-blue-800 transition">
+            <i data-lucide="message-circle" class="w-7 h-7 mx-auto mb-3 text-blue-200"></i>
+            <p class="font-semibold">WhatsApp</p>
+            <p class="text-blue-200 text-sm mt-2">(41) 9660-4511</p>
+            <p class="text-xs text-blue-300 mt-2">Enviar mensagem</p>
           </a>
-
-          <a href="mailto:caducarbobiak@gmail.com" class="group bg-blue-700/50 border border-blue-600/40 rounded-2xl p-6 flex flex-col items-center text-center gap-3 hover:bg-white hover:border-white transition-all duration-300 cursor-pointer">
-            <div class="w-12 h-12 bg-white/10 group-hover:bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300">
-              <i data-lucide="mail" class="w-[22px] h-[22px] text-white group-hover:text-blue-700 transition-colors duration-300"></i>
-            </div>
-            <div>
-              <p class="font-semibold text-white group-hover:text-blue-900 transition-colors text-sm">E-mail</p>
-              <p class="text-blue-200 group-hover:text-blue-600 text-sm transition-colors">caducarbobiak@gmail.com</p>
-            </div>
-            <span class="text-xs font-semibold text-blue-300 group-hover:text-blue-600 transition-colors">Enviar e-mail →</span>
+          <a href="mailto:caducarbobiak@gmail.com" class="bg-blue-800/60 border border-blue-700 rounded-2xl p-6 hover:bg-blue-800 transition">
+            <i data-lucide="mail" class="w-7 h-7 mx-auto mb-3 text-blue-200"></i>
+            <p class="font-semibold">E-mail</p>
+            <p class="text-blue-200 text-sm mt-2 break-all">caducarbobiak@gmail.com</p>
+            <p class="text-xs text-blue-300 mt-2">Enviar e-mail</p>
           </a>
-
-          <a href="tel:+554196604511" class="group bg-blue-700/50 border border-blue-600/40 rounded-2xl p-6 flex flex-col items-center text-center gap-3 hover:bg-white hover:border-white transition-all duration-300 cursor-pointer">
-            <div class="w-12 h-12 bg-white/10 group-hover:bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300">
-              <i data-lucide="phone" class="w-[22px] h-[22px] text-white group-hover:text-blue-700 transition-colors duration-300"></i>
-            </div>
-            <div>
-              <p class="font-semibold text-white group-hover:text-blue-900 transition-colors text-sm">Telefone</p>
-              <p class="text-blue-200 group-hover:text-blue-600 text-sm transition-colors">(41) 9660-4511</p>
-            </div>
-            <span class="text-xs font-semibold text-blue-300 group-hover:text-blue-600 transition-colors">Ligar agora →</span>
+          <a href="tel:+554196604511" class="bg-blue-800/60 border border-blue-700 rounded-2xl p-6 hover:bg-blue-800 transition">
+            <i data-lucide="phone" class="w-7 h-7 mx-auto mb-3 text-blue-200"></i>
+            <p class="font-semibold">Telefone</p>
+            <p class="text-blue-200 text-sm mt-2">(41) 9660-4511</p>
+            <p class="text-xs text-blue-300 mt-2">Ligar</p>
           </a>
         </div>
-
-        <div class="bg-blue-700/30 border border-blue-600/30 rounded-2xl p-6 flex flex-col md:flex-row items-start md:items-center gap-4">
-          <i data-lucide="map-pin" class="w-5 h-5 text-blue-300 flex-shrink-0 mt-0.5 md:mt-0"></i>
-          <div>
-            <p class="text-sm font-semibold text-white mb-0.5">Endereço para Correspondência</p>
-            <p class="text-blue-200 text-sm">
-              Rua Francisco de Almeida Filho, 59 — Cidade Industrial, Curitiba/PR — CEP 81279-215 — Brasil
-            </p>
-          </div>
-        </div>
+        <p class="text-xs text-blue-300 mt-6">Utilize estes canais somente se estiverem ativos e autorizados para atendimento da empresa.</p>
       </div>
     </section>
 
-    <!-- POLÍTICA DE PRIVACIDADE -->
     <section id="privacidade" class="py-20 bg-gray-50">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-12">
-          <span class="text-sm font-semibold text-blue-600 uppercase tracking-widest">Conformidade Legal</span>
+          <span class="text-sm font-semibold text-blue-600 uppercase tracking-widest">Proteção de dados</span>
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Política de Privacidade</h2>
-          <p class="text-gray-500 max-w-xl mx-auto">
-            Nosso compromisso com a proteção de dados e conformidade com a LGPD.
-          </p>
+          <p class="text-gray-500 max-w-xl mx-auto">Informações gerais sobre o tratamento de dados pessoais.</p>
         </div>
-
         <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
           <div class="bg-blue-700 px-8 py-5 flex items-center gap-3">
-            <i data-lucide="shield" class="w-5 h-5 text-blue-200"></i>
-            <div>
-              <p class="font-semibold text-white text-sm">Proteção de Dados — LGPD</p>
-              <p class="text-blue-200 text-xs">Lei Geral de Proteção de Dados · Lei nº 13.709/2018</p>
-            </div>
+            <i data-lucide="shield-check" class="w-6 h-6 text-blue-100"></i>
+            <div><p class="font-semibold text-white">Proteção de Dados — LGPD</p><p class="text-blue-200 text-xs">Lei Geral de Proteção de Dados — Lei nº 13.709/2018</p></div>
           </div>
-
-          <div class="p-8 space-y-8 text-gray-700 text-sm leading-relaxed">
-            <div class="flex gap-5">
-              <div class="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <span class="text-blue-700 text-xs font-bold">1</span>
-              </div>
-              <div>
-                <h3 class="font-bold text-gray-900 mb-2">Informações Coletadas</h3>
-                <p>Coletamos exclusivamente informações de contato (nome, e-mail, telefone) fornecidas voluntariamente para fins de comunicação comercial e execução dos serviços contratados. Dados sensíveis nunca são coletados sem consentimento explícito e formalizado.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-5">
-              <div class="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <span class="text-blue-700 text-xs font-bold">2</span>
-              </div>
-              <div>
-                <h3 class="font-bold text-gray-900 mb-2">Finalidade do Uso</h3>
-                <p>Os dados coletados são utilizados estritamente para: (a) execução e entrega dos serviços de consultoria contratados; (b) comunicação sobre o progresso dos projetos; (c) cumprimento de obrigações legais e contratuais aplicáveis.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-5">
-              <div class="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <span class="text-blue-700 text-xs font-bold">3</span>
-              </div>
-              <div>
-                <h3 class="font-bold text-gray-900 mb-2">Compartilhamento de Dados</h3>
-                <p>Nenhuma informação pessoal é comercializada ou cedida a terceiros. Eventualmente, dados poderão ser compartilhados apenas com ferramentas operacionais estritamente necessárias à prestação do serviço (ex.: plataformas de gestão, sistemas de comunicação), sempre sob cláusulas de confidencialidade.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-5">
-              <div class="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <span class="text-blue-700 text-xs font-bold">4</span>
-              </div>
-              <div>
-                <h3 class="font-bold text-gray-900 mb-2">Direitos do Titular (LGPD)</h3>
-                <p>O titular tem direito a solicitar a qualquer momento: acesso aos seus dados, correção de informações desatualizadas, portabilidade, eliminação ou revogação do consentimento. Para exercer esses direitos, entre em contato pelo e-mail caducarbobiak@gmail.com.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-5">
-              <div class="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <span class="text-blue-700 text-xs font-bold">5</span>
-              </div>
-              <div>
-                <h3 class="font-bold text-gray-900 mb-2">Segurança das Informações</h3>
-                <p>Adotamos medidas técnicas e organizacionais adequadas para proteger os dados pessoais contra acesso não autorizado, alteração, divulgação ou destruição indevida, seguindo as melhores práticas de segurança da informação.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-5">
-              <div class="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <span class="text-blue-700 text-xs font-bold">6</span>
-              </div>
-              <div>
-                <h3 class="font-bold text-gray-900 mb-2">Conformidade Regulatória</h3>
-                <p>Todas as atividades desta consultoria são conduzidas em conformidade com a legislação brasileira vigente, incluindo a LGPD (Lei nº 13.709/2018) e demais normas aplicáveis às atividades empresariais de prestação de serviços.</p>
-              </div>
-            </div>
-
-            <p class="text-xs text-gray-400 text-center pt-4 border-t border-gray-100">
-              Última atualização: Janeiro de 2026.
-            </p>
+          <div class="p-8 space-y-7 text-gray-700 text-sm leading-relaxed">
+            <div><h3 class="font-bold text-gray-900 mb-2">1. Dados coletados</h3><p>Os dados pessoais tratados devem se limitar ao necessário para responder solicitações, manter comunicação e prestar os serviços contratados, conforme a finalidade aplicável.</p></div>
+            <div><h3 class="font-bold text-gray-900 mb-2">2. Finalidade do tratamento</h3><p>Os dados poderão ser utilizados para atendimento, elaboração de propostas, execução de serviços e cumprimento de obrigações legais ou contratuais.</p></div>
+            <div><h3 class="font-bold text-gray-900 mb-2">3. Compartilhamento</h3><p>O compartilhamento, quando necessário, deverá ocorrer de forma limitada à finalidade informada e em conformidade com a legislação aplicável.</p></div>
+            <div><h3 class="font-bold text-gray-900 mb-2">4. Direitos dos titulares</h3><p>O titular pode solicitar confirmação do tratamento, acesso, correção, anonimização, bloqueio, eliminação quando cabível e demais direitos previstos na LGPD. Para solicitações, escreva para <a class="text-blue-700 underline" href="mailto:caducarbobiak@gmail.com">caducarbobiak@gmail.com</a> ou entre em contato pelo telefone/WhatsApp (41) 9660-4511.</p></div>
+            <div><h3 class="font-bold text-gray-900 mb-2">5. Segurança e retenção</h3><p>A empresa deve adotar medidas técnicas e administrativas razoáveis para proteger os dados pessoais e mantê-los somente pelo período necessário às finalidades informadas ou ao cumprimento de obrigações legais.</p></div>
+            <div><h3 class="font-bold text-gray-900 mb-2">6. Canal de privacidade</h3><p>Para dúvidas ou solicitações relacionadas à privacidade e proteção de dados, utilize <a class="text-blue-700 underline" href="mailto:caducarbobiak@gmail.com">caducarbobiak@gmail.com</a> ou (41) 9660-4511.</p></div>
+            <p class="text-xs text-gray-400 text-center pt-4 border-t border-gray-100">Esta política deve ser conferida e ajustada para refletir os dados efetivamente coletados, as ferramentas utilizadas, os prazos de retenção e os procedimentos reais da empresa.</p>
           </div>
         </div>
       </div>
     </section>
+  </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 text-gray-400 py-10">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
-          <div>
-            <p class="text-white font-bold text-base mb-1">Carlos Eduardo Gomes Carbobiak</p>
-            <p class="text-sm">CNPJ: 65.543.950/0001-08</p>
-            <p class="text-sm mt-1">
-              Rua Francisco de Almeida Filho, 59 — Cidade Industrial
-              <br />
-              Curitiba/PR — CEP 81279-215 — Brasil
-            </p>
-          </div>
-          <div class="flex flex-col gap-2 text-sm">
-            <a href="mailto:caducarbobiak@gmail.com" class="hover:text-white transition-colors flex items-center gap-2">
-              <i data-lucide="mail" class="w-3.5 h-3.5"></i> caducarbobiak@gmail.com
-            </a>
-            <a href="tel:+554196604511" class="hover:text-white transition-colors flex items-center gap-2">
-              <i data-lucide="phone" class="w-3.5 h-3.5"></i> (41) 9660-4511
-            </a>
-          </div>
+  <footer class="bg-gray-950 text-gray-400 py-10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
+        <div>
+          <p class="text-white font-bold text-base mb-1">MONTEIRO RINCO ASSESSORIA E CONSULTORIA LTDA</p>
+          <p class="text-sm">CNPJ: 61.754.608/0001-04</p>
+          <p class="text-sm mt-2">Ana Carolina Ferreira da Silva — responsável/proprietária informada</p>
+          <p class="text-sm mt-2">Rua 8, nº 8, LT 1 QO, Centro<br>Itapetininga/SP — CEP 18200-999</p>
         </div>
-        <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs">
-          <p>&copy; 2026 Carlos Eduardo Gomes Carbobiak. Todos os direitos reservados.</p>
-          <button onclick="scrollToSection('privacidade')" class="hover:text-white transition-colors">
-            Política de Privacidade
-          </button>
+        <div class="flex flex-col gap-2 text-sm">
+          <a href="mailto:caducarbobiak@gmail.com" class="hover:text-white flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> caducarbobiak@gmail.com</a>
+          <a href="tel:+554196604511" class="hover:text-white flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> (41) 9660-4511</a>
+          <a href="https://wa.me/554196604511" target="_blank" rel="noopener noreferrer" class="hover:text-white flex items-center gap-2"><i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp</a>
         </div>
       </div>
-    </footer>
-  </body>
+      <div class="border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs">
+        <p>© <span id="year"></span> MONTEIRO RINCO ASSESSORIA E CONSULTORIA LTDA. Todos os direitos reservados.</p>
+        <a href="#privacidade" class="hover:text-white">Política de Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const toggle = document.getElementById('menu-toggle');
+      menu.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      const toggle = document.getElementById('menu-toggle');
+      const isOpen = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click', closeMobileMenu));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    if (window.lucide) lucide.createIcons();
+  </script>
+</body>
 </html>
